@@ -1,0 +1,28 @@
+{
+  "name": "yt-video-converter",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "webpack --mode development --watch",
+    "build": "webpack --mode production"
+  },
+  "dependencies": {
+    "cookie-parser": "1.4.4",
+    "debug": "2.6.9",
+    "express": "4.16.1",
+    "http-errors": "1.6.3",
+    "morgan": "1.9.1",
+    "ejs": "3.1.6",
+    "ytdl-core": "4.8.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.5",
+    "@babel/plugin-transform-runtime": "^7.14.5",
+    "@babel/preset-env": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  }
+}

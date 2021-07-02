@@ -1,0 +1,13 @@
+<%- include('shared/header.ejs', { currentPageTitle })  %> 
+
+  <%- include('shared/header_lastDownload.ejs') %> 
+
+  <div class="container my-5"> 
+    <div id="last_downloads" class="mb-5 p-5 bg-gray"> </div>
+
+    <button class="btn bg-green border border-dark border-2 fw-bold rounded-0 position-fixed bottom-0 end-0 m-3" id="btn_scroll_top">
+      <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="15" height="15"><path d="M7.5 1.5l.354-.354L7.5.793l-.354.353.354.354zm-.354.354l4 4 .708-.708-4-4-.708.708zm0-.708l-4 4 .708.708 4-4-.708-.708zM7 1.5V14h1V1.5H7z" fill="currentColor"></path></svg>
+    </button>
+  </div>
+
+<%- include('shared/footer.ejs') %> 

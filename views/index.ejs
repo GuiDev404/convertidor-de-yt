@@ -1,0 +1,35 @@
+<%- include('shared/header.ejs', { currentPageTitle })  %> 
+
+  <div class="bg-primary-5 text-white pt-5 pb-3 px-5 shadow-sm">
+    <div class="mb-5">
+      <h1 class="h2 text-center text-white "> Convertidor de YouTube a mp4  </h1>
+      <p class="text-white text-center"> Con YTConversor podras convertir y descargar videos MP4 de Youtube con distintas calidades.</p>
+    </div>
+
+    <div class="input-group mb-3 w-75 mx-auto input_and_btn">
+      <input type="text" id="input_url" class="form-control form-control-lg rounded-0" placeholder="Ingrese o pegue aqui la URL/enlace" aria-label="Ingrese o pegue aqui la URL" aria-describedby="button-addon2">
+      <button class="btn btn-lg btn-dark rounded-0 text-uppercase" type="button" id="btn_comenzar">Convertir</button>
+    </div>
+
+  </div>
+  <h2 class="fw-bold h6 pt-3 mt-0 text-center bg-primary text-white invisible" id="msg-error"></h2>
+
+  <div class="container mt-5">
+ 
+      <div class="d-flex justify-content-center align-items-center flex-column" id="img-add">
+        <img src="/images/add.svg" alt="add some" class="img-add">
+        <span class="text-muted small mt-3 pl-5 d-block text-center"> No a convertido nada aún. Ingrese una URL </span>
+      </div>
+
+      <div class="lds-ring d-none my-4" id="loader">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    
+      <div id="resultado" class="my-4 p-0 d-none"> </div>
+      
+  </div>
+
+<%- include('shared/footer.ejs') %> 

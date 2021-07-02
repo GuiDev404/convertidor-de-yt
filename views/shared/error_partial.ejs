@@ -1,0 +1,23 @@
+<div class="m-0 rounded-0 shadow-none d-flex justify-content-center align-items-center" style="min-height: 80vh;" >
+  <div class="row g-0 col-md-10 col-sm-12">
+    <div class="col-md-4 container-card-img">
+      <img src="/images/gif_404_02.gif" class='img-fluid' 
+      alt="error 404">
+    </div>
+    <div class="col-md-8 col-sm-12 pt-0">
+      <div class="card-body py-0">
+         <h2 class="display-3 fw-bold text-uppercase"> 
+          ERROR <span class="bg-green p-0 text-dark"><%=status%></span>! 
+          <span class="d-block"> <%= message %> </span>
+         </h2>
+         <p class="lead"> <%= customMessage %> </p>
+
+         <% if (status === 404) { %>
+          <a href="/" class="btn btn-lg text-dark fw-bold border border-dark border-2 bg-green rounded-0 px-5 mt-2"> 
+            IR AL INICIO 
+          </a> 
+         <% } %> 
+      </div>
+    </div>
+  </div>
+</div>

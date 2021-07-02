@@ -1,0 +1,134 @@
+:root {
+  --brand-color_1: #a7ff35;
+  --brand-color_2: var(--bs-primary);
+  --brand-color_3: #9933ff;
+  --brand-color_4: tomato;
+  --brand-color_5: #fff35c;
+  --brand-color_6: #8429de;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+}
+
+*::selection {
+  background: var(--brand-color_1);
+  color: #000;
+}
+
+.bg-green { background: var(--brand-color_1) !important; }
+
+.input-group .form-control:focus,
+.input-group .form-control:active,
+.input-group .btn:focus {
+  box-shadow: none !important;
+}
+
+.input-group {
+  border: 3px solid var(--bs-dark) inset !important;
+}
+
+.input-group input {
+  font-size: 18px;
+}
+
+.bg-gray { background: rgb(238, 238, 238); }
+.bg-primary-5 { background: #3c65ff; }
+
+#card_download {
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+#msg-error {
+  height: 50px;
+  color: var(--brand-color_1);
+}
+
+.active {
+  position: relative;
+}
+
+.active::after {
+  content: ''; 
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  width: 100%;
+  /* height: 100%; */
+  border-bottom: 4px solid var(--brand-color_1) !important;
+}
+
+.img-not-found {
+  width: 40vw;
+}
+
+.img-add {
+  width: 18%;
+}
+
+.ellipsis{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.container-card-img {
+  overflow: hidden;
+}
+
+.large-card__img,
+.small-card__img  {
+  object-fit: cover;
+}
+
+.small-card__img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .img-not-found {
+    width: 70vw;
+  }
+  
+  .large-card__img,
+  .small-card__img   {
+    width: 100%; 
+  }
+
+  .ellipsis {
+    all: unset; 
+    /* overflow: initial;
+    white-space: normal;
+    text-overflow: none; */
+  }
+
+  .input_and_btn {
+    width: 100% !important;
+  }
+
+  .img-add {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 489px){
+  .input_and_btn {
+    flex-direction: column;
+  }
+  .input_and_btn input,
+  .input_and_btn button {
+    width: 100% !important;
+  }
+
+  .img-add {
+    width: 50%;
+  }
+}
