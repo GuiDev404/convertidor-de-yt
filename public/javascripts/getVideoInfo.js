@@ -1,16 +1,13 @@
 import { BASE_URL } from "./config/const";
 import { loader, resultado, msgErr, inputUrl, imgAdd } from './config/htmlElements'
-import { removeClass, insertClass, randomNumberBetween } from './utils'
+import { removeClass, insertClass, randomNumberBetween, showErrorMsg } from './utils'
 import showVideoInfo from './showVideoInfo'
-
-const TIME_IN_SECONDS = 4000;
 
 async function getVideoInfo (){
   const INPUT_URL = inputUrl.value;
 
   if(!INPUT_URL){
-    removeClass(msgErr, 'invisible');
-    msgErr.innerText = 'La URL es requirida 😔'; 
+    showErrorMsg(msgErr, 'La URL es requerida 😔');
     return false;
   }
 
@@ -22,13 +19,7 @@ async function getVideoInfo (){
     const data = await res.json();
 
     if(!res.ok){
-      msgErr.innerText = data.msg || 'La URL ingresada no es valida 😬'; 
-      removeClass(msgErr, 'invisible');
-
-      setTimeout(()=> {
-        msgErr.innerText = '';
-        insertClass(msgErr, 'invisible');
-      } , TIME_IN_SECONDS);
+      showErrorMsg(msgErr, data.msg || 'La URL ingresada no es valida 😬');
       return false;
     }
     insertClass(resultado, 'd-none');
@@ -42,8 +33,8 @@ async function getVideoInfo (){
     }, randomNumberBetween(3000, 5000))
      
   } catch (error) {
-    msgErr.innerText = 'Ups algo salio mal 😞'; 
-    removeClass(msgErr, 'invisible');
+    showErrorMsg(msgErr, 'Ups algo salio mal 😞');
+    return false;
   }
 
 }

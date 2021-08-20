@@ -1,4 +1,5 @@
 import activePage from './activePage'
+import showErrorMsg from './showErrorMsg'
 import { removeClass, insertClass } from './handleClass'
 import randomNumberBetween from './randomNumberBetween'
 import { scrollToTop, scrollToBottom } from './scrollTo'
@@ -9,5 +10,6 @@ export {
   removeClass, insertClass,
   randomNumberBetween,
   scrollToTop, scrollToBottom,
-  setStorage, getStorage
+  setStorage, getStorage,
+  showErrorMsg
 }

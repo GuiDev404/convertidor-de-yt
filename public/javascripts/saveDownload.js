@@ -6,7 +6,7 @@ function saveDownload(payload) {
     setStorage(KEY_LOCAL_STORAGE, [payload]);
   } else {
     const storaged = getStorage(KEY_LOCAL_STORAGE);
-    const alreadyExist = storaged.some(video=> video.url === payload.url);
+    const alreadyExist = storaged.some(video=> video.url.includes(payload.url));
     
     if(!alreadyExist) { 
       const data =  [...storaged, payload];

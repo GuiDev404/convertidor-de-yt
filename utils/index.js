@@ -1,6 +1,5 @@
 module.exports  = {
   /**
-   * 
    * @param {Array} info 
    * @returns un arreglo de las extensiones disponibles, en formatos legibles.
    */

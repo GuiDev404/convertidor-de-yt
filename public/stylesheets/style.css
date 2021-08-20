@@ -61,8 +61,7 @@
   bottom: -15px;
   left: 0;
   width: 100%;
-  /* height: 100%; */
-  border-bottom: 4px solid var(--brand-color_1) !important;
+  height: 100%;  border-bottom: 4px solid var(--brand-color_1) !important;
 }
 
 .img-not-found {
@@ -93,6 +92,13 @@
   height: auto;
 }
 
+@media screen and (max-width: 990px){
+  .active::after {
+    bottom: 0;
+    width: 40px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .img-not-found {
     width: 70vw;
@@ -117,6 +123,15 @@
   .img-add {
     width: 40%;
   }
+
+  .error_page {
+    padding: 50px !important;
+    text-align: center;
+  }
+
+  .error_page  .card-body {
+    padding-top: 25px !important;
+  }
 }
 
 @media screen and (max-width: 489px){
@@ -132,3 +147,4 @@
     width: 50%;
   }
 }
+
